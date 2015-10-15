@@ -1,60 +1,13 @@
 {
   "name": "awsm-phantomjs",
   "version": "0.0.1",
-  "location": "https://github.com/nrempel/awsm-phantomjs",
-  "author": "Nicholas Rempel <nbrempel@gmail.com>",
   "description": "AWSM for PhantomJS functions",
+  "location": "https://github.com/nrempel/awsm-phantomjs",
   "resources": {
     "cloudFormation": {
-      "LambdaIamPolicyDocumentStatements": [
-        {
-          "Effect": "Allow",
-          "Action": [
-            "s3:PutObject",
-            "s3:PutObjectAcl"
-          ],
-          "Resource": [
-            {
-              "Fn::Join": [
-                "",
-                [
-                  "arn:aws:s3:::",
-                  "imgresize.",
-                  {
-                    "Ref": "aaProjectDomain"
-                  },
-                  "/",
-                  {
-                    "Ref": "aaDataModelStage"
-                  },
-                  "*"
-                ]
-              ]
-            }
-          ]
-        }
-      ],
+      "LambdaIamPolicyDocumentStatements": [],
       "ApiGatewayIamPolicyDocumentStatements": [],
-      "Resources": {
-        "ImgS3Bucket": {
-          "Type": "AWS::S3::Bucket",
-          "DeletionPolicy": "Delete",
-          "Properties": {
-            "AccessControl": "PublicRead",
-            "BucketName": {
-              "Fn::Join": [
-                ".",
-                [
-                  "imgresize",
-                  {
-                    "Ref": "aaProjectDomain"
-                  }
-                ]
-              ]
-            }
-          }
-        }
-      }
+      "Resources": {}
     }
   }
 }
