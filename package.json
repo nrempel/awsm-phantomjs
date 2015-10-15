@@ -1,0 +1,25 @@
+{
+  "name": "awsm-phantomjs",
+  "version": "0.0.1",
+  "description": "AWSM for PhantomJS functions",
+  "author": "Nicholas Rempel <nbrempel@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrempel/awsm-phantomjs"
+  },
+  "keywords": [
+    "awsm",
+    "phantomjs",
+    "phantom.js",
+    "phantom js"
+  ],
+  "scripts": {
+    "postinstall": "jaws postinstall awsm-phantomjs npm"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "phantomjs": "^1.9.18"
+  }
+}
